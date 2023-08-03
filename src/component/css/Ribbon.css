@@ -1,0 +1,16 @@
+.ribbon-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+.my-tab-button {
+    margin: 5px;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+
+.my-tab-button.active {
+    background-color: blue;
+}
