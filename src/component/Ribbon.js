@@ -1,31 +1,34 @@
 import React, { useState } from 'react';
 import Tab from './Tab';
-import './css/Ribbon.css';
+import './css/Tab.css';
 
 export default function Ribbon() {
+  // how to change what tab is 'active'
   const [activeTab, setActiveTab] = useState(0);
 
+
+  // click tab and it sets its state to 'active'
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
 
   return (
     <div>
-      <div className="my-component-container">
+      <div className="ribbon-container">
         <Tab
           label="Tab 1"
           isActive={activeTab === 0}
-          onClick={() => handleTabClick(0)}
+          onClickFunction={() => handleTabClick(0)}
         />
         <Tab
           label="Tab 2"
           isActive={activeTab === 1}
-          onClick={() => handleTabClick(1)}
+          onClickFunction={() => handleTabClick(1)}
         />
         <Tab
           label="Tab 3"
           isActive={activeTab === 2}
-          onClick={() => handleTabClick(2)}
+          onClickFunction={() => handleTabClick(2)}
         />
       </div>
 
